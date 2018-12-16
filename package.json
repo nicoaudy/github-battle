@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "babel": {
-      "presets": [
-	"@babel/preset-env",
-	"@babel/preset-react"
-      ]
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   },
   "scripts": {
     "create": "webpack",
@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
