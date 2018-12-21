@@ -1,8 +1,8 @@
-var React = require('react');
-var Link = require('react-router-dom').Link;
+const React = require('react');
+const Link = require('react-router-dom').Link;
 
-var PlayerInput = require('./PlayerInput');
-var PlayerPreview = require('./PlayerPreview');
+const PlayerInput = require('./PlayerInput');
+const PlayerPreview = require('./PlayerPreview');
 
 class Battle extends React.Component {
 	constructor(props){
@@ -19,7 +19,7 @@ class Battle extends React.Component {
 	}
 	handleReset(id) {
 		this.setState(function(){
-			var newState = {};
+			const newState = {};
 			newState[id + 'Name'] = '';
 			newState[id + 'Image'] = null;
 			return newState;
@@ -27,18 +27,18 @@ class Battle extends React.Component {
 	}
 	handleSubmit(id, username) {
 		this.setState(function(){
-			var newState = {};
+			const newState = {};
 			newState[id + 'Name'] = username;
 			newState[id + 'Image'] = 'https://github.com/' + username + '.png?size=200';
 			return newState;
 		});
 	}
 	render(){
-		var match = this.props.match;
-		var playerOneName = this.state.playerOneName;
-		var playerTwoName = this.state.playerTwoName;
-		var playerOneImage = this.state.playerOneImage;
-		var playerTwoImage = this.state.playerTwoImage;
+		const match = this.props.match;
+		const playerOneName = this.state.playerOneName;
+		const playerTwoName = this.state.playerTwoName;
+		const playerOneImage = this.state.playerOneImage;
+		const playerTwoImage = this.state.playerTwoImage;
 
 		return (
 			<div>
