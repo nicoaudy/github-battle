@@ -13,12 +13,14 @@ export default class Popular extends React.Component {
 		this.updateLanguage(this.state.selectedLanguage);
 	}
 
-	updateLanguage = (lang) => {
-		this.setState({ selectedLanguage: lang })
-
-		fetchPopularRepos(lang).then((repos) => {
-			this.setState({ repos })
+	updateLanguage = async (lang) => {
+		this.setState({ 
+			selectedLanguage: lang,
+			repos: null
 		})
+
+		const repos = await fetchPopularRepos(lang)
+		this.setState({ repos })
 	}
 
 	render(){
