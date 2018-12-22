@@ -1,5 +1,5 @@
-const React = require('react')
-const PlayerPreview = require('./PlayerPreview');
+import React from 'react'
+import PlayerPreview from './PlayerPreview'
 
 const Profile = ({ info }) => {
   return (
@@ -17,4 +17,4 @@ const Profile = ({ info }) => {
   )
 }
 
-module.exports = Profile;
+export default Profile;

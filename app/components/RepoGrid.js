@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react'
 
 const RepoGrid = props => {
     return (
@@ -24,4 +24,4 @@ const RepoGrid = props => {
     )
 }
 
-module.exports = RepoGrid;
+export default RepoGrid;

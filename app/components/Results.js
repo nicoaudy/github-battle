@@ -1,10 +1,11 @@
-const React = require('react');
-const queryString = require('query-string');
-const api = require('../utils/api');
-const Link = require('react-router-dom').Link;
-const Player = require('./Player');
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-class Results extends React.Component {
+import queryString from 'query-string'
+import { battle } from '../utils/api'
+import Player from './Player'
+
+export default class Results extends React.Component {
 	constructor(props){
 		super(props);
 		
@@ -17,7 +18,7 @@ class Results extends React.Component {
 	}
 	componentDidMount(){
 		const { playerOneName, playerTwoName } = queryString.parse(this.props.location.search);
-		api.battle([
+		battle([
 			playerOneName,
 			playerTwoName
 		]).then((results) => {
@@ -69,5 +70,3 @@ class Results extends React.Component {
 		);
 	}
 }
-
-module.exports = Results;

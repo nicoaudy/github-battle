@@ -1,9 +1,9 @@
-const React = require('react');
-const api = require('../utils/api');
-const SelectLanguage = require('./SelectLanguage');
-const RepoGrid = require('./RepoGrid');
+import React from 'react'
+import { fetchPopularRepos  } from '../utils/api'
+import SelectLanguage from './SelectLanguage'
+import RepoGrid from './RepoGrid'
 
-class Popular extends React.Component {
+export default class Popular extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -21,7 +21,7 @@ class Popular extends React.Component {
 	updateLanguage(lang){
 		this.setState({ selectedLanguage: lang })
 
-		api.fetchPopularRepos(lang).then((repos) => {
+		fetchPopularRepos(lang).then((repos) => {
 			this.setState({ repos })
 		})
 	}
@@ -40,5 +40,3 @@ class Popular extends React.Component {
 		)
 	}
 }
-
-module.exports = Popular;

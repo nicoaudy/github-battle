@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react'
 
-class NotFound extends React.Component {
+export default class NotFound extends React.Component {
 	render(){
 		return (
 			<div className="home-container">
@@ -9,5 +9,3 @@ class NotFound extends React.Component {
 		)	
 	}
 }
-
-module.exports = NotFound;

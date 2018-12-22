@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react'
 
 const SelectLanguage = ({ selectedLanguage, onSelect }) => {
     const languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python'];
@@ -19,4 +19,4 @@ const SelectLanguage = ({ selectedLanguage, onSelect }) => {
     )
 }
 
-module.exports = SelectLanguage;
+export default SelectLanguage; 

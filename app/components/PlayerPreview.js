@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react'
 
 const PlayerPreview = ({ avatar, username, children }) => {
 	return (
@@ -16,4 +16,4 @@ const PlayerPreview = ({ avatar, username, children }) => {
 	);
 }
 
-module.exports = PlayerPreview;
+export default PlayerPreview;

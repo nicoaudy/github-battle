@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react'
 
-class PlayerInput extends React.Component {
+export default class PlayerInput extends React.Component {
 	constructor(props){
 		super(props);
 
@@ -48,5 +48,3 @@ class PlayerInput extends React.Component {
 		);
 	}
 }
-
-module.exports = PlayerInput;

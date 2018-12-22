@@ -1,5 +1,5 @@
-const React = require('react');
-const Profile = require('./Profile');
+import React from 'react'
+import Profile from './Profile'
 
 const Player = ({ label, score, profile }) => {
 	return(
@@ -11,4 +11,4 @@ const Player = ({ label, score, profile }) => {
 	);
 }
 
-module.exports = Player;
+export default Player
