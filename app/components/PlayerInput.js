@@ -1,21 +1,14 @@
 import React from 'react'
 
 export default class PlayerInput extends React.Component {
-	constructor(props){
-		super(props);
-
-		this.state = {
-			username: ''
-		}
-
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+	state = {
+		username: ''
 	}
-	handleChange(event){
+	handleChange = (event) => {
 		const value = event.target.value;
 		this.setState({ username: value })
 	}
-	handleSubmit(event){
+	handleSubmit = (event) => {
 		event.preventDefault();
 		this.props.onSubmit( 
 			this.props.id,
