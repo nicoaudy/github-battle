@@ -1,8 +1,7 @@
-var React = require('react')
-var PlayerPreview = require('./PlayerPreview');
+const React = require('react')
+const PlayerPreview = require('./PlayerPreview');
 
-const Profile = (props) => {
-  var info = props.info;
+const Profile = ({ info }) => {
   return (
     <PlayerPreview username={info.login} avatar={info.avatar_url}>
       <ul className='space-list-items'>
